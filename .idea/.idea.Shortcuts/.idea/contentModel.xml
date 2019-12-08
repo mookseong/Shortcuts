@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kmkoo\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kmkoo\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Shortcuts.-1694708254.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kmkoo\source\repos\Shortcuts" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Shortcuts" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Form1.cs" t="Include" />
+        <e p="Form1.Designer.cs" t="Include" />
+        <e p="Form1.resx" t="Include" />
+        <e p="Lib" t="Include">
+          <e p="Data.cs" t="Include" />
+          <e p="ProgramSetup.cs" t="Include" />
+          <e p="WindowsFunction.cs" t="Include" />
+        </e>
+        <e p="LIST_UserControl" t="Include">
+          <e p="Test1.cs" t="Include" />
+          <e p="Test1.Designer.cs" t="Include" />
+          <e p="Test1.resx" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+          <e p="Settings.Designer.cs" t="Include" />
+          <e p="Settings.settings" t="Include" />
+        </e>
+        <e p="Shortcuts.csproj" t="IncludeRecursive" />
+        <e p="UI_UserContorol" t="Include">
+          <e p="AddUC.cs" t="Include" />
+          <e p="AddUC.Designer.cs" t="Include" />
+          <e p="AddUC.resx" t="Include" />
+          <e p="HomeUC.cs" t="Include" />
+          <e p="HomeUC.Designer.cs" t="Include" />
+          <e p="HomeUC.resx" t="Include" />
+          <e p="ListUC.cs" t="Include" />
+          <e p="ListUC.Designer.cs" t="Include" />
+          <e p="ListUC.resx" t="Include" />
+        </e>
+      </e>
+      <e p="Shortcuts.sln" t="IncludeFlat" />
+    </e>
+  </component>
+</project>
