@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Shortcuts.Lib;
 
 namespace Shortcuts.UI_UserContorol
 {
@@ -15,6 +16,18 @@ namespace Shortcuts.UI_UserContorol
         public AddUC()
         {
             InitializeComponent();
+        }
+
+        private void Add()
+        {
+            var list = new Dictionary<string, string>();
+            list.Add("tses111","test");
+            list.Add("tses1","test");
+           
+            var xml = new XML();
+            xml.XmlWrite("tset", 2, list);
+//           
+//           xml.XmlRead();
         }
     }
 }

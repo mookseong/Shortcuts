@@ -29,14 +29,6 @@ namespace Shortcuts
         private void button1_Click(object sender, EventArgs e)
         {
            homeUC.BringToFront();
-           var list = new Dictionary<string, string>();
-           list.Add("tses111","test");
-           list.Add("tses1","test");
-           
-           var xml = new XML();
-           xml.XmlWrite("tset", 2, list);
-//           
-//           xml.XmlRead();
         }
 
         private void button2_Click(object sender, EventArgs e)

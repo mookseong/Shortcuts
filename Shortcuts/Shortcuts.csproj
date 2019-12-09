@@ -58,11 +58,23 @@
     <Compile Include="Lib\Data.cs" />
     <Compile Include="Lib\ProgramSetup.cs" />
     <Compile Include="Lib\WindowsFunction.cs" />
-    <Compile Include="LIST_UserControl\Test1.cs">
+    <Compile Include="LIST_UserControl\Delay.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LIST_UserControl\Test1.Designer.cs">
-      <DependentUpon>Test1.cs</DependentUpon>
+    <Compile Include="LIST_UserControl\Delay.Designer.cs">
+      <DependentUpon>Delay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIST_UserControl\ProgramStart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LIST_UserControl\ProgramStart.Designer.cs">
+      <DependentUpon>ProgramStart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LIST_UserControl\Shutdown.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LIST_UserControl\Shutdown.Designer.cs">
+      <DependentUpon>Shutdown.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -87,8 +99,14 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LIST_UserControl\Test1.resx">
-      <DependentUpon>Test1.cs</DependentUpon>
+    <EmbeddedResource Include="LIST_UserControl\Delay.resx">
+      <DependentUpon>Delay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LIST_UserControl\ProgramStart.resx">
+      <DependentUpon>ProgramStart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LIST_UserControl\Shutdown.resx">
+      <DependentUpon>Shutdown.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

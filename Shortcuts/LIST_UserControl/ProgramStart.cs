@@ -2,9 +2,9 @@
 
 namespace Shortcuts.LIST_UserControl
 {
-    public partial class Test1 : UserControl
+    public partial class ProgramStart : UserControl
     {
-        public Test1()
+        public ProgramStart()
         {
             InitializeComponent();
         }

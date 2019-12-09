@@ -12,3 +12,17 @@ C:\Users\kmkoo\source\repos\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.CopyC
 C:\Users\kmkoo\source\repos\Shortcuts\Shortcuts\obj\Debug\Shortcuts.exe
 C:\Users\kmkoo\source\repos\Shortcuts\Shortcuts\obj\Debug\Shortcuts.pdb
 C:\Users\kmkoo\source\repos\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.Test1.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\bin\Debug\Shortcuts.exe.config
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\bin\Debug\Shortcuts.pdb
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csprojAssemblyReference.cache
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.Form1.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.Properties.Resources.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.UI_UserContorol.AddUC.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.UI_UserContorol.HomeUC.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.UI_UserContorol.ListUC.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.GenerateResource.cache
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.CopyComplete
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.exe
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.pdb
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.WhileFunction.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.ProgramStart.resources
