@@ -49,7 +49,7 @@ namespace Shortcuts
             list.Add("Path","test1");
             list.Add("Data","test2");
            
-            var xml = new XML();
+            var xml = new Xml();
             xml.XmlWrite(_type, list);
         }
 

@@ -15,8 +15,6 @@
         <e p="Form1.Designer.cs" t="Include" />
         <e p="Form1.resx" t="Include" />
         <e p="Lib" t="Include">
-          <e p="Data.cs" t="Include" />
-          <e p="ProgramSetup.cs" t="Include" />
           <e p="WindowsFunction.cs" t="Include" />
         </e>
         <e p="LIST_UserControl" t="Include">

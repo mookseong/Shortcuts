@@ -23,7 +23,7 @@ namespace Shortcuts
 
             var fileInfo = new FileInfo(@"C:\mookseong\config.xml");
             if (fileInfo.Exists) return;
-            var xml = new XML();
+            var xml = new Xml();
             xml.XmlCreate();
         }
 

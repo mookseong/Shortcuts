@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.InteropServices;
+using System.Threading;
 using System.Windows.Forms;
 using System.Xml;
 
@@ -167,7 +169,7 @@ namespace Shortcuts.Lib
         }
     }
 
-    class XML
+    internal class Xml
     {
         private const string Path = @"C:\mookseong\config.xml";
 
@@ -200,8 +202,8 @@ namespace Shortcuts.Lib
             foreach (XmlNode xmlNode in nodeList)
             {
                 Console.WriteLine(
-                    xmlNode.Attributes?["Index"].Value + "," +
-                    xmlNode.SelectSingleNode("./Name")?.InnerText + "," +
+                    xmlNode.Attributes?["Index"].Value + @"," +
+                    xmlNode.SelectSingleNode("./Name")?.InnerText + @"," +
                     xmlNode.SelectSingleNode("Dept")?.InnerText);
 
                 foreach (XmlNode child in xmlNode.ChildNodes)
@@ -234,5 +236,47 @@ namespace Shortcuts.Lib
             xmlDoc.DocumentElement?.AppendChild(root);
             xmlDoc.Save(Path);
         }
+    }
+
+    internal class ProgramSetup 
+    {
+        private readonly string _programPath;
+        private readonly string[] _option;
+        private string _program;
+        
+        public ProgramSetup(string programPath, string[] option)
+        {
+            _programPath = programPath;
+            if (option == null)
+            {
+                ProgramPathRegister();
+                return;
+            }
+            _option = option;
+            OptionRegister();
+
+        }
+
+        private void ProgramPathRegister() => _program = _programPath;
+        private void OptionRegister() 
+            => _program = _programPath + _option.Aggregate(" ", (current, t) => current + " " + t);
+
+        public void Start()
+        {
+            try
+            {
+                var thread = new Thread(Open);
+                thread.Start();
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show( e.ToString(),@"오류가 발생했습니다.");
+                throw;
+            }
+            
+        }
+
+        public void Open() => Process.Start(_program);
+
     }
 }
