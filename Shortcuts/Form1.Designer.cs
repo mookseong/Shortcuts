@@ -36,7 +36,7 @@
             this.homeButton = new System.Windows.Forms.Button();
             this.mainDockPanel = new System.Windows.Forms.Panel();
             this.listUC = new Shortcuts.UI_UserContorol.ListUC();
-            this.addUC = new Shortcuts.UI_UserContorol.AddUC();
+            this.addUC = new Shortcuts.UI_UserContorol.AddUc();
             this.homeUC = new Shortcuts.UI_UserContorol.HomeUC();
             this.buttonPanel.SuspendLayout();
             this.mainDockPanel.SuspendLayout();
@@ -186,7 +186,7 @@
         private System.Windows.Forms.Button listButton;
         private System.Windows.Forms.Button startButton;
         private Shortcuts.UI_UserContorol.HomeUC homeUC;
-        private Shortcuts.UI_UserContorol.AddUC addUC;
+        private Shortcuts.UI_UserContorol.AddUc addUC;
         private Shortcuts.UI_UserContorol.ListUC listUC;
     }
 }

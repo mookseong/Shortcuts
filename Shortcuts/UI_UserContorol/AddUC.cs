@@ -11,23 +11,19 @@ using Shortcuts.Lib;
 
 namespace Shortcuts.UI_UserContorol
 {
-    public partial class AddUC : UserControl
+    public partial class AddUc : UserControl
     {
-        public AddUC()
+        public AddUc()
         {
             InitializeComponent();
         }
 
-        private void Add()
+        private void button1_Click(object sender, EventArgs e)
         {
-            var list = new Dictionary<string, string>();
-            list.Add("tses111","test");
-            list.Add("tses1","test");
-           
-            var xml = new XML();
-            xml.XmlWrite("tset", 2, list);
-//           
-//           xml.XmlRead();
+            var addForm = new AddForm("Program");
+            addForm.Show();
         }
+        
+        
     }
 }

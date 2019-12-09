@@ -49,7 +49,7 @@ namespace Shortcuts.Lib
             catch (Exception e)
             {
                 Console.WriteLine(e);
-                MessageBox.Show("오류가 발생했습니다.","에러코드" + e);
+                MessageBox.Show(@"에러코드" + e, @"오류가 발생했습니다.");
                 throw;
             }
         }
@@ -98,11 +98,11 @@ namespace Shortcuts.Lib
                     catch (IOException e)
                     {
                         Console.WriteLine(e.Message);
-                        MessageBox.Show("에러가 발생했습니다", "에러 코드 : " + e.Message);
+                        MessageBox.Show( @"에러 코드 : " + e.Message, @"에러가 발생했습니다");
                     }
                 }
                 else
-                    MessageBox.Show("에러가 발생했습니다", "사용자의 경로를 확인 할 수 없습니다.");
+                    MessageBox.Show(@"사용자의 경로를 확인 할 수 없습니다.",@"에러가 발생했습니다");
             }
             else
             {
@@ -116,10 +116,10 @@ namespace Shortcuts.Lib
                     catch (IOException e)
                     {
                         Console.WriteLine(e.Message);
-                        MessageBox.Show("에러가 발생했습니다", "에러 코드 : " + e.Message);
+                        MessageBox.Show(@"에러 코드 : " + e.Message, @"에러가 발생했습니다");
                     }
                 }else
-                    MessageBox.Show("에러가 발생했습니다", "사용자의 경로를 확인 할 수 없습니다.");
+                    MessageBox.Show( @"사용자의 경로를 확인 할 수 없습니다.",@"에러가 발생했습니다");
             }
         }
         
@@ -151,7 +151,7 @@ namespace Shortcuts.Lib
                 case "!=":
                     return a != b;
                 default:
-                    MessageBox.Show("Error", "연산자에 문제가 발생했습니다.");
+                    MessageBox.Show(@"연산자에 문제가 발생했습니다.", @"Error");
                     break;
             }
 
@@ -179,10 +179,36 @@ namespace Shortcuts.Lib
             newXmlDoc.AppendChild(newXmlDoc.CreateElement("", "Root", ""));
             newXmlDoc.Save(Path);
         }
+
+        private int xmlSize()
+        {
+            var xmlDoc = new XmlDocument();
+            xmlDoc.Load(Path);
+            var count = xmlDoc.SelectNodes("/Root/Data")?.Count;
+            if (count != null) return (int) count;
+            return -1;
+        }
         
         public void XmlRead()
         {
-            
+            var xmlDoc = new XmlDocument();
+
+            xmlDoc.Load(Path);
+            var nodeList = xmlDoc.SelectNodes("/Root/Data");
+
+            if (nodeList == null) return;
+            foreach (XmlNode xmlNode in nodeList)
+            {
+                Console.WriteLine(
+                    xmlNode.Attributes?["Index"].Value + "," +
+                    xmlNode.SelectSingleNode("./Name")?.InnerText + "," +
+                    xmlNode.SelectSingleNode("Dept")?.InnerText);
+
+                foreach (XmlNode child in xmlNode.ChildNodes)
+                {
+                    Console.WriteLine(@"{0}: {1}", child.Name, child.InnerText);
+                }
+            }
         }
         
         private XmlNode CreateNode(XmlDocument xmlDoc, string name, string innerXml)
@@ -193,15 +219,14 @@ namespace Shortcuts.Lib
             return node;
         }
         
-        public void XmlWrite(string type, int indexSzie, Dictionary<string, string> dictionary)
+        public void XmlWrite(string type, Dictionary<string, string> dictionary)
         {
-            
-
             var xmlDoc = new XmlDocument();
             xmlDoc.Load(Path);
             
-            var root = xmlDoc.CreateElement(type);
-            root.SetAttribute("Index", indexSzie.ToString());
+            var root = xmlDoc.CreateElement("Data");
+            root.SetAttribute("Index", xmlSize() == -1 ? "1" : xmlSize().ToString());
+            root.SetAttribute("Type", type);
 
             foreach (var i in dictionary)
                 root.AppendChild(CreateNode(xmlDoc, i.Key, i.Value));

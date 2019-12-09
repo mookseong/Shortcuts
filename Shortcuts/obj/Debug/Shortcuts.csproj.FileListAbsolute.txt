@@ -24,5 +24,7 @@ C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.Gener
 C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.CopyComplete
 C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.exe
 C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.pdb
-C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.WhileFunction.resources
 C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.ProgramStart.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.AddForm.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.Deleay.resources
+C:\Users\user\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.Shutdown.resources

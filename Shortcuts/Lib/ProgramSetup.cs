@@ -15,10 +15,17 @@ namespace Shortcuts.Lib
         public ProgramSetup(string programPath, string[] option)
         {
             _programPath = programPath;
+            if (option == null)
+            {
+                ProgramPathRegister();
+                return;
+            }
             _option = option;
             OptionRegister();
+
         }
 
+        private void ProgramPathRegister() => _program = _programPath;
         private void OptionRegister() 
             => _program = _programPath + _option.Aggregate(" ", (current, t) => current + " " + t);
 
@@ -26,18 +33,18 @@ namespace Shortcuts.Lib
         {
             try
             {
-                Thread thread = new Thread(Open);
+                var thread = new Thread(Open);
                 thread.Start();
             }
             catch (Exception e)
             {
-                Console.WriteLine(@"에러발생 : " + e);
-                MessageBox.Show(@"오류가 발생했습니다.", e.ToString());
+                MessageBox.Show( e.ToString(),@"오류가 발생했습니다.");
                 throw;
             }
             
         }
-        private void Open() => Process.Start(_program);
+
+        public void Open() => Process.Start(_program);
 
     }
 }

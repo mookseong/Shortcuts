@@ -6,6 +6,9 @@
     <e p="C:\Users\user\RiderProjects\Shortcuts" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Shortcuts" t="IncludeRecursive">
+        <e p="AddForm.cs" t="Include" />
+        <e p="AddForm.Designer.cs" t="Include" />
+        <e p="AddForm.resx" t="Include" />
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="Form1.cs" t="Include" />

@@ -3,16 +3,11 @@ using System.Windows.Forms;
 
 namespace Shortcuts.LIST_UserControl
 {
-    public partial class WhileFunction : UserControl
+    public partial class Shutdown : UserControl
     {
-        public WhileFunction()
+        public Shutdown()
         {
             InitializeComponent();
-        }
-
-        private void WhileFunction_Load(object sender, EventArgs e)
-        {
-           
         }
     }
 }
