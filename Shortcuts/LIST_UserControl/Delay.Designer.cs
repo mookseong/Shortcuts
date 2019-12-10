@@ -31,16 +31,18 @@ namespace Shortcuts.LIST_UserControl
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.TEXT = new System.Windows.Forms.TextBox();
             this.Text1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // TEXT
             // 
-            this.textBox1.Location = new System.Drawing.Point(73, 13);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(73, 23);
-            this.textBox1.TabIndex = 3;
+            this.TEXT.Location = new System.Drawing.Point(73, 12);
+            this.TEXT.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TEXT.Name = "TEXT";
+            this.TEXT.Size = new System.Drawing.Size(73, 23);
+            this.TEXT.TabIndex = 3;
+            this.TEXT.TextChanged += new System.EventHandler(this.TEXT_TextChanged);
             // 
             // Text1
             // 
@@ -56,7 +58,7 @@ namespace Shortcuts.LIST_UserControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.TEXT);
             this.Controls.Add(this.Text1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Deleay";
@@ -68,6 +70,6 @@ namespace Shortcuts.LIST_UserControl
         #endregion
 
         private System.Windows.Forms.Label Text1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox TEXT;
     }
 }

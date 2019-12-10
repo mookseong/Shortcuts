@@ -77,6 +77,7 @@
             this.button4.TabIndex = 2;
             this.button4.Text = "딜레이";
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             this.button2.Dock = System.Windows.Forms.DockStyle.Top;
             this.button2.Location = new System.Drawing.Point(0, 80);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);

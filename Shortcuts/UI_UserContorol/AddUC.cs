@@ -18,12 +18,13 @@ namespace Shortcuts.UI_UserContorol
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            var addForm = new AddForm("Program");
-            addForm.Show();
-        }
+        private void FormStart(Control control) => control.Show();
         
+        private void button1_Click(object sender, EventArgs e) 
+            => FormStart(new AddForm("Program"));
+        
+        private void button4_Click(object sender, EventArgs e)
+            => FormStart(new AddForm("Delay"));
         
     }
 }

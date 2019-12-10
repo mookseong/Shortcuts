@@ -37,7 +37,7 @@ namespace Shortcuts
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(42, 11);
+            this.panel1.Location = new System.Drawing.Point(12, 11);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(330, 50);
@@ -45,12 +45,12 @@ namespace Shortcuts
             // 
             // 저장
             // 
-            this.저장.Location = new System.Drawing.Point(396, 11);
+            this.저장.Location = new System.Drawing.Point(359, 5);
             this.저장.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.저장.Name = "저장";
-            this.저장.Size = new System.Drawing.Size(104, 50);
+            this.저장.Size = new System.Drawing.Size(86, 62);
             this.저장.TabIndex = 1;
-            this.저장.Text = "저장.";
+            this.저장.Text = "저장";
             this.저장.UseVisualStyleBackColor = true;
             this.저장.Click += new System.EventHandler(this.저장_Click);
             // 
@@ -59,7 +59,7 @@ namespace Shortcuts
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(533, 78);
+            this.ClientSize = new System.Drawing.Size(455, 77);
             this.Controls.Add(this.저장);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);

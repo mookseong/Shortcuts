@@ -6,9 +6,7 @@ namespace Shortcuts.LIST_UserControl
     public partial class ProgramStart : UserControl
     {
         public static string File { get; private set; }
-       
-
-
+        
         public ProgramStart()
         {
             InitializeComponent();
