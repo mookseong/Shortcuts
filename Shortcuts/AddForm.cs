@@ -69,7 +69,7 @@ namespace Shortcuts
                     }
                     break;
                 case "Shutdown":
-                    IndexAdd("Option", null);
+                    IndexAdd(Shutdown.Text, null);
                     break;
                 case "Delay":
                     IndexAdd(Deleay.text, null);

@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
+using System.Linq;
+using System.Windows.Forms;
 using System.Xml;
 
 namespace Shortcuts.Lib
@@ -29,24 +32,8 @@ namespace Shortcuts.Lib
         
         public void XmlRead()
         {
-            var xmlDoc = new XmlDocument();
-
-            xmlDoc.Load(Path);
-            var nodeList = xmlDoc.SelectNodes("/Root/Data");
-
-            if (nodeList == null) return;
-            foreach (XmlNode xmlNode in nodeList)
-            {
-                Console.WriteLine(
-                    xmlNode.Attributes?["Index"].Value + @"," +
-                    xmlNode.SelectSingleNode("./Name")?.InnerText + @"," +
-                    xmlNode.SelectSingleNode("Dept")?.InnerText);
-
-                foreach (XmlNode child in xmlNode.ChildNodes)
-                {
-                    Console.WriteLine(@"{0}: {1}", child.Name, child.InnerText);
-                }
-            }
+            
+            return;
         }
         
         private XmlNode CreateNode(XmlDocument xmlDoc, string name, string innerXml)

@@ -34,11 +34,18 @@ namespace Shortcuts.LIST_UserControl
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.Text1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // textBox1
+            // 
             this.textBox1.Location = new System.Drawing.Point(16, 18);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(73, 23);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // Text1
+            // 
             this.Text1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (129)));
             this.Text1.Location = new System.Drawing.Point(95, 18);
@@ -46,6 +53,9 @@ namespace Shortcuts.LIST_UserControl
             this.Text1.Size = new System.Drawing.Size(212, 24);
             this.Text1.TabIndex = 4;
             this.Text1.Text = "초 후 컴퓨터 종료하기";
+            // 
+            // Shutdown
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);

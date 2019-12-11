@@ -182,12 +182,9 @@ namespace Shortcuts.Lib
                 ProgramPathRegister();
                 return;
             }
-            if (option != null)
-            {
-                _option = option;
-                OptionRegister();
-            }
-           
+            _option = option;
+            OptionRegister();
+            
         }
 
         private void ProgramPathRegister() => _program = _programPath;
