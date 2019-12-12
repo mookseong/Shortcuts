@@ -26,10 +26,20 @@ namespace Shortcuts
                     PanelUserControlAdd(new Deleay());
                     break;
                 case "Volume":
+                    PanelUserControlAdd(new Volume());
                     break;
                 case "Ip":
+                    var ip = new TextControl();
+                    panel1.Controls.Add(ip);
+                    ip.Text1.Text = @"IP주소 불러와서 표시하기";
                     break;
                 case "Today":
+                    var today = new TextControl();
+                    panel1.Controls.Add(today);
+                    today.Text1.Text = @"IP주소 불러와서 표시하기";
+                    break;
+                case "Copy":
+                    PanelUserControlAdd(new FileControl());
                     break;
             }
         }
@@ -44,13 +54,25 @@ namespace Shortcuts
         private void IndexAdd(string data ,string path)
         {
             var list = new Dictionary<string, string>();
-            if (_type == "Shutdown" || _type == "Delay")
-                list.Add("Time", data);
+            
+            list.Add(_type, data);
+            
             if (path != null)
             {
                 list.Add("Option", data);
                 list.Add("Path", path);
             }
+            var xml = new Xml();
+            xml.XmlWrite(_type, list);
+        }
+        
+        private void IndexAdd(string data ,string path, string path2)
+        {
+            var list = new Dictionary<string, string>();
+            list.Add(data, data);
+            list.Add("File", path);
+            list.Add("Dir", path2);
+         
             var xml = new Xml();
             xml.XmlWrite(_type, list);
         }
@@ -74,8 +96,22 @@ namespace Shortcuts
                 case "Delay":
                     IndexAdd(Deleay.text, null);
                     break;
+                case "Date":
+                    IndexAdd("Date", null);
+                    break;
+                case "Volume":
+                    IndexAdd(Volume.Index, null);
+                    break;
+                case "Ip":
+                    IndexAdd("Ip", null);
+                    break;
+                case "Today":
+                    break;
+                case "Copy":
+                    IndexAdd("Copy", FileControl.FilePath, FileControl.FilePath);
+                    break;
                 default:
-                    MessageBox.Show(@"뭔가 잘못된것 같아요\n작동범위를 벗어났습니다.", @"뭐지?");
+                    MessageBox.Show(@"뭔가 잘못된것 같아요 데이터를 저장하는 중에 오류가 발생했어요", @"뭐지?");
                     break;
             }
             Close();

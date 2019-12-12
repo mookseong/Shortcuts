@@ -25,6 +25,41 @@ namespace Shortcuts.UI_UserContorol
         
         private void button4_Click(object sender, EventArgs e)
             => FormStart(new AddForm("Delay"));
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            FormStart(new AddForm("Volume"));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FormStart(new AddForm("Shutdown"));
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            FormStart(new AddForm("Ip"));
+        }
         
+        private void button6_Click(object sender, EventArgs e)
+        {
+            FormStart(new AddForm("Copy"));
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormStart(new AddForm("Date"));
+        }
     }
 }

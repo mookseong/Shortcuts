@@ -54,14 +54,14 @@ namespace Shortcuts.LIST_UserControl
             this.Text1.TabIndex = 2;
             this.Text1.Text = "초 기달리기";
             // 
-            // Deleay
+            // Delay
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.TEXT);
             this.Controls.Add(this.Text1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Deleay";
+            this.Name = "Delay";
             this.Size = new System.Drawing.Size(330, 50);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -70,6 +70,6 @@ namespace Shortcuts.LIST_UserControl
         #endregion
 
         private System.Windows.Forms.Label Text1;
-        private System.Windows.Forms.TextBox TEXT;
+        public System.Windows.Forms.TextBox TEXT;
     }
 }

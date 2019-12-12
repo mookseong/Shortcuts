@@ -11,10 +11,10 @@ namespace Shortcuts.UI_UserContorol
         public ListUC()
         {
             InitializeComponent();
-            set();
+            Set();
         }
-
-        public void set()
+        
+        public void Set()
         {
             flowLayoutPanel1.Controls.Clear();
             var xmlDoc = new XmlDocument();
@@ -32,14 +32,47 @@ namespace Shortcuts.UI_UserContorol
                         programStart.button1.Enabled = false;
                         break;
                     case "Shutdown":
-                           
+                        var shutdown = new Shutdown();
+                        flowLayoutPanel1.Controls.Add(shutdown);
+                        shutdown.textBox1.Enabled = false;
                         break;
                     case "Delay":
-                            
+                        var deleay = new Deleay();
+                        flowLayoutPanel1.Controls.Add(deleay);
+                        deleay.TEXT.Text = xmlNode.InnerText;
+                        deleay.TEXT.Enabled = false;
+                        break;
+                    case "Volume":
+                        var volume = new Volume();
+                        flowLayoutPanel1.Controls.Add(volume);
+                        volume.textBox1.Text = xmlNode.InnerText;
+                        volume.textBox1.Enabled = false;
+                        break;
+                    case "Ip":
+                        var ip = new TextControl();
+                        flowLayoutPanel1.Controls.Add(ip);
+                        ip.Text1.Text = @"IP주소 불러와서 표시하기";
+                        break;
+                    case "Date":
+                        var date = new TextControl();
+                        flowLayoutPanel1.Controls.Add(date);
+                        date.Text1.Text = @"날자와 시간 표시";
+                        break;
+                    case "Today":
+                        var today = new TextControl();
+                        flowLayoutPanel1.Controls.Add(today);
+                        today.Text1.Text = @"IP주소 불러와서 표시하기";
+                        break;
+                    case "Copy":
+                        var fileControl = new FileControl();
+                        flowLayoutPanel1.Controls.Add(fileControl);
+                        fileControl.button1.Enabled = false;
+                        fileControl.button2.Enabled = false;
                         break;
                 }
             }
         }
+
         
     }
 }

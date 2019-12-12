@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
@@ -22,12 +23,7 @@ namespace Shortcuts
         public Form1()
         {
             InitializeComponent();
-            homeUC.BringToFront();
-
-            var fileInfo = new FileInfo(@"C:\mookseong\config.xml");
-            if (fileInfo.Exists) return;
-            var xml = new Xml();
-            xml.XmlCreate();
+            listUC.BringToFront();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -43,37 +39,14 @@ namespace Shortcuts
         private void button3_Click(object sender, EventArgs e)
         {
             listUC.BringToFront();
-            listUC.set();
+            listUC.Set();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            var xmlDoc = new XmlDocument();
-
-            xmlDoc.Load(@"C:\mookseong\config.xml");
-            var nodeList = xmlDoc.SelectNodes("/Root/Data");
-            MessageBox.Show(xmlDoc.SelectNodes("/Root/Data")?.Count.ToString());
-            
-            if (nodeList == null) return ;
-            foreach (XmlNode xmlNode in nodeList)
-            {
-                foreach (XmlNode child in xmlNode.ChildNodes)
-                {
-                    switch (child.Name)
-                    {
-                        case "Path":
-                            var programSetup = new ProgramSetup(child.InnerText, null);
-                            programSetup.Open();
-                            break;
-                        case "Time":
-                            break;
-//                        default:
-//                            MessageBox.Show(@"오류가 발생한거같아요", @"뭥미");
-//                            break;
-                    }
-                }
-            }
-
+            var start = new Start();
+            var t1 = new Thread(start.ProgramStart);
+            t1.Start();
         }
     }
 }

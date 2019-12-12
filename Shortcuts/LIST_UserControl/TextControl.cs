@@ -3,17 +3,11 @@ using System.Windows.Forms;
 
 namespace Shortcuts.LIST_UserControl
 {
-    public partial class Shutdown : UserControl
+    public partial class TextControl : UserControl
     {
-        public static string Text;
-        public Shutdown()
+        public TextControl()
         {
             InitializeComponent();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            Text = textBox1.Text;
         }
 
         private void Text1_Click(object sender, EventArgs e)

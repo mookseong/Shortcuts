@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml;
+using Shortcuts.LIST_UserControl;
 
 namespace Shortcuts.Lib
 {
@@ -65,4 +66,53 @@ namespace Shortcuts.Lib
             xmlDoc.Save(Path);
         }
     }
+
+
+     class Start
+     {
+         public void ProgramStart()
+         {
+             var xmlDoc = new XmlDocument();
+
+             xmlDoc.Load(@"C:\mookseong\config.xml");
+             var nodeList = xmlDoc.SelectNodes("/Root/Data");
+             MessageBox.Show(xmlDoc.SelectNodes("/Root/Data")?.Count.ToString());
+            
+             if (nodeList == null) return ;
+             foreach (XmlNode xmlNode in nodeList)
+             {
+                 var windowsFunction = new WindowsFunction();
+                 foreach (XmlNode child in xmlNode.ChildNodes)
+                 {
+                     switch (child.Name)
+                     {
+                         case "Path":
+                             var programSetup = new ProgramSetup(child.InnerText, null);
+                             programSetup.Open();
+                             break;
+                         case "Date":
+                             windowsFunction.Date();
+                             break;
+                         case "Shutdown":
+                             windowsFunction.Shutdown(int.Parse(child.InnerText));
+                             break;
+                         case "Delay":
+                             windowsFunction.Delay(int.Parse(child.InnerText));
+                             break;
+                         case "Volume":
+                             windowsFunction.SetSoundVolume(ushort.Parse(child.InnerText));
+                             break;
+                         case "Ip":
+                             windowsFunction.Ip();
+                             break;
+                         case "Today":
+                             break;
+                         case "Copy":
+                             windowsFunction.Copy("","","");
+                             break;
+                     }
+                 }
+             }
+         }
+     }
 }

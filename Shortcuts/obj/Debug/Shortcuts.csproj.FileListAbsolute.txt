@@ -45,3 +45,6 @@ C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.Core
 C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.csproj.CopyComplete
 C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.exe
 C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.pdb
+C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.TextControl.resources
+C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.Volume.resources
+C:\Users\kmkoo\RiderProjects\Shortcuts\Shortcuts\obj\Debug\Shortcuts.LIST_UserControl.FileControl.resources

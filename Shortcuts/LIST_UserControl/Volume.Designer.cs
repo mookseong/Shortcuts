@@ -2,7 +2,7 @@
 
 namespace Shortcuts.LIST_UserControl
 {
-    partial class Shutdown
+    partial class Volume
     {
         /// <summary> 
         /// Required designer variable.
@@ -37,32 +37,31 @@ namespace Shortcuts.LIST_UserControl
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(16, 18);
+            this.textBox1.Location = new System.Drawing.Point(20, 12);
             this.textBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(73, 23);
-            this.textBox1.TabIndex = 5;
+            this.textBox1.TabIndex = 7;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Text1
             // 
             this.Text1.Font = new System.Drawing.Font("맑은 고딕", 14.25F, System.Drawing.FontStyle.Regular,
                 System.Drawing.GraphicsUnit.Point, ((byte) (129)));
-            this.Text1.Location = new System.Drawing.Point(95, 18);
+            this.Text1.Location = new System.Drawing.Point(99, 12);
             this.Text1.Name = "Text1";
             this.Text1.Size = new System.Drawing.Size(212, 24);
-            this.Text1.TabIndex = 4;
-            this.Text1.Text = "초 후 컴퓨터 종료하기";
-            this.Text1.Click += new System.EventHandler(this.Text1_Click);
+            this.Text1.TabIndex = 6;
+            this.Text1.Text = "%로 볼륨조절하기";
             // 
-            // Shutdown
+            // Volume
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.Text1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Name = "Shutdown";
+            this.Name = "Volume";
             this.Size = new System.Drawing.Size(330, 50);
             this.ResumeLayout(false);
             this.PerformLayout();

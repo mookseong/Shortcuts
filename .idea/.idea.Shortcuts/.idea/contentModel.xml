@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\user\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\user\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Shortcuts.222217778.00" t="ExcludeRecursive" />
-    <e p="C:\Users\user\RiderProjects\Shortcuts" t="IncludeFlat">
+    <e p="C:\Users\kmkoo\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kmkoo\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_Shortcuts.-1795184956.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kmkoo\RiderProjects\Shortcuts" t="IncludeFlat">
       <e p="packages" t="ExcludeRecursive" />
       <e p="Shortcuts" t="IncludeRecursive">
         <e p="AddForm.cs" t="Include" />
@@ -22,12 +22,21 @@
           <e p="Delay.cs" t="Include" />
           <e p="Delay.Designer.cs" t="Include" />
           <e p="Delay.resx" t="Include" />
+          <e p="FileControl.cs" t="Include" />
+          <e p="FileControl.Designer.cs" t="Include" />
+          <e p="FileControl.resx" t="Include" />
           <e p="ProgramStart.cs" t="Include" />
           <e p="ProgramStart.Designer.cs" t="Include" />
           <e p="ProgramStart.resx" t="Include" />
           <e p="Shutdown.cs" t="Include" />
           <e p="Shutdown.Designer.cs" t="Include" />
           <e p="Shutdown.resx" t="Include" />
+          <e p="TextControl.cs" t="Include" />
+          <e p="TextControl.Designer.cs" t="Include" />
+          <e p="TextControl.resx" t="Include" />
+          <e p="Volume.cs" t="Include" />
+          <e p="Volume.Designer.cs" t="Include" />
+          <e p="Volume.resx" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive" />
         <e p="Program.cs" t="Include" />

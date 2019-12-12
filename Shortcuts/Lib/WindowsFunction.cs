@@ -21,27 +21,28 @@ namespace Shortcuts.Lib
         private static extern int waveOutSetVolume(IntPtr hwo, uint dwVolume);
 
         //컴퓨터 종료
-        private void Shutdown(int time) 
+        public void Shutdown(int time) 
             => Process.Start("shshutdown", "/s /t " + time);
 
         //딜레이 
-        private DateTime Delay(int i)
+        public void Delay(int i)
         {
-            var thisMoment = DateTime.Now;
-            var duration = new TimeSpan(0, 0, 0, 0, i);
-            
-            while (thisMoment.Add(duration) >= thisMoment)
-                thisMoment = DateTime.Now;
-            
-            return DateTime.Now;
+            Thread.Sleep(i + 000);
+            // var thisMoment = DateTime.Now;
+            // var duration = new TimeSpan(0, 0, 0, 0, i);
+            //
+            // while (thisMoment.Add(duration) >= thisMoment)
+            //     thisMoment = DateTime.Now;
+            //
+            // return DateTime.Now;
         }
         
         //날자 불러오기
-        private string Date() 
-            => DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+        public void Date()
+            => MessageBox.Show(DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"), @"현재 날자와 시간");
         
         //컴퓨터 볼륨 조절
-        private void SetSoundVolume(ushort volume)
+        public void SetSoundVolume(ushort volume)
         {
             try
             {
@@ -57,7 +58,7 @@ namespace Shortcuts.Lib
         }
         
         //파일 복사하기
-        private void Copy(string fileName, string source, string target)
+        public void Copy(string fileName, string source, string target)
         {
             var destFile = Path.Combine(target, fileName);
             Directory.CreateDirectory(target);
@@ -79,7 +80,7 @@ namespace Shortcuts.Lib
             }
         }
 
-        private void FileMove(string source, string  destination, bool dir)
+        public void FileMove(string source, string  destination, bool dir)
         {
             if (dir)
                 Directory.Move(source, destination);
@@ -87,7 +88,7 @@ namespace Shortcuts.Lib
                 File.Move(source, destination);
         }
 
-        private void Delete(string source, bool dir)
+        public void Delete(string source, bool dir)
         {
             if (dir)
             {
@@ -125,7 +126,7 @@ namespace Shortcuts.Lib
             }
         }
         
-        public string Ip()
+        public void Ip()
         {
             var localIp = "";
             foreach (var ip in Dns.GetHostEntry(Dns.GetHostName()).AddressList)
@@ -134,7 +135,7 @@ namespace Shortcuts.Lib
                 localIp = ip.ToString();
                 break;
             }
-            return localIp;
+            MessageBox.Show(localIp, @"현재 사용중인 IP");
         }
     }
     
