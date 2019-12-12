@@ -43,6 +43,7 @@ namespace Shortcuts
         private void button3_Click(object sender, EventArgs e)
         {
             listUC.BringToFront();
+            listUC.set();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -56,12 +57,10 @@ namespace Shortcuts
             if (nodeList == null) return ;
             foreach (XmlNode xmlNode in nodeList)
             {
-                
                 foreach (XmlNode child in xmlNode.ChildNodes)
                 {
                     switch (child.Name)
                     {
-                            
                         case "Path":
                             var programSetup = new ProgramSetup(child.InnerText, null);
                             programSetup.Open();

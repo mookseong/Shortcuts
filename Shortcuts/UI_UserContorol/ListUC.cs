@@ -11,6 +11,12 @@ namespace Shortcuts.UI_UserContorol
         public ListUC()
         {
             InitializeComponent();
+            set();
+        }
+
+        public void set()
+        {
+            flowLayoutPanel1.Controls.Clear();
             var xmlDoc = new XmlDocument();
 
             xmlDoc.Load(@"C:\mookseong\config.xml");

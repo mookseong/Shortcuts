@@ -30,10 +30,15 @@ namespace Shortcuts.Lib
             return -1;
         }
         
-        public void XmlRead()
+        public void XmlDelete()
         {
+            var xmlDoc = new XmlDocument();
+            xmlDoc.Load(Path); //xml파일 읽고
             
-            return;
+            var root = xmlDoc.DocumentElement;
+            root?.RemoveChild(root.ChildNodes[1]);
+            
+            xmlDoc.Save(Path);
         }
         
         private XmlNode CreateNode(XmlDocument xmlDoc, string name, string innerXml)
